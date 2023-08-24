@@ -42,20 +42,20 @@ word1 and word2 consist of lowercase English letters.
  * @return {string}
  */
 var mergeAlternately = function (word1, word2) {
-  let returnValue = "";
-  let minLength = Math.min(word1.length, word2.length);
+    let returnValue = "";
+    let minLength = Math.min(word1.length, word2.length);
 
-  for (let i = 0; i < minLength; i++) {
-    returnValue += word1.charAt(i) + word2.charAt(i);
-  }
+    for (let i = 0; i < minLength; i++) {
+        returnValue += word1.charAt(i) + word2.charAt(i);
+    }
 
-  if (minLength < word1.length) {
-    returnValue += word1.slice(minLength, word1.length);
-  } else if (minLength < word2.length) {
-    returnValue += word2.slice(minLength, word2.length);
-  }
+    if (minLength < word1.length) {
+        returnValue += word1.slice(minLength, word1.length);
+    } else if (minLength < word2.length) {
+        returnValue += word2.slice(minLength, word2.length);
+    }
 
-  return returnValue;
+    return returnValue;
 };
 
 console.log("Example 1: " + mergeAlternately("abc", "pqr"));
@@ -81,11 +81,11 @@ console.log("Example 3: " + mergeAlternately("abcd", "pq"));
  */
 
 /* Solution from leetcode */
-var mergeAlternately = function(word1, word2) {
- let result = '';
-  for (let i = 0; i < Math.max(word1.length, word2.length); i++) {
-    if (i < word1.length) result += word1[i];
-    if (i < word2.length) result += word2[i];
-  }
-  return result;
+var mergeAlternately = function (word1, word2) {
+    let result = '';
+    for (let i = 0; i < Math.max(word1.length, word2.length); i++) {
+        if (i < word1.length) result += word1[i];
+        if (i < word2.length) result += word2[i];
+    }
+    return result;
 };
